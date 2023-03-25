@@ -1,0 +1,278 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f8f8f8;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #999;
+  overflow-x: hidden;
+}
+.brand-logo {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+}
+
+.login-form,
+.signup-form {
+  margin-top: 24px;
+  position: relative;
+}
+.login-form input,
+.signup-form input {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  padding: 6px 15px;
+  color: black;
+  margin-bottom: 20px;
+}
+.login-form input::placeholder,
+.signup-form input::placeholder {
+  color: black;
+}
+
+.login-form input:focus,
+.signup-form input:focus {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0);
+}
+
+.login-form span,
+.signup-form span {
+  position: absolute;
+  color: red;
+  font-size: 14px;
+}
+
+.login-btn,
+.signup-btn,
+.create-post-btn {
+  background-color: #111;
+  border: 1px solid #111;
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: 4px;
+  box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 9%);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+.login-btn,
+.signup-btn {
+  display: inline-block;
+  width: 100%;
+}
+
+.login-btn:hover,
+.signup-btn:hover,
+.create-post-btn:hover {
+  opacity: 0.8;
+}
+
+.create-post-form {
+  position: relative;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.42;
+}
+.create-post-form input {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #444;
+  height: 100%;
+}
+.create-post-form input:focus {
+  outline: none;
+}
+.create-post-form input[type="text"] {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+}
+.create-post-form input[type="file"] {
+  cursor: pointer;
+}
+.create-post-form > span {
+  position: absolute;
+  color: red;
+  font-size: 12px;
+  left: 0;
+}
+
+.ql-editor {
+  color: #444;
+}
+
+.content-wrapper {
+  /* all: initial; */
+  color: #777;
+}
+
+.content-wrapper h1,
+.content-wrapper h2,
+.content-wrapper h3 {
+  color: rgba(0, 0, 0, 0.8);
+}
+.content-wrapper h1 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.content-wrapper h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+.content-wrapper h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+.content-wrapper strong {
+  color: #555;
+}
+.content-wrapper blockquote {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 40px;
+  margin-inline-end: 40px;
+}
+.content-wrapper img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.content-wrapper ul {
+  list-style: initial;
+}
+.content-wrapper li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+.content-wrapper ol {
+  display: block;
+  list-style-type: decimal;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+.content-wrapper a {
+  color: #f4bf2c;
+}
+.content-wrapper a:hover {
+  border-bottom: 2px solid #f4bf2c;
+}
+.ql-editor {
+  min-height: 250px;
+  /* background-color: white; */
+}
+
+.posts-wrapper > div:nth-child(even) {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.footer-links > svg {
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s ease;
+  color: #c4c4c4;
+}
+.footer-links > svg:hover {
+  color: #111;
+}
+
+.bg-yellow {
+  height: calc(100vh - 68px);
+}
+
+form > span {
+  pointer-events: none;
+}
+
+.single-post-wrapper > div {
+  width: 100%;
+}
+
+.single-post-wrapper > img {
+  max-width: 50%;
+}
+
+.small-screen-btn {
+  display: none;
+}
+
+/* **********  */
+/* PAGINATION  */
+/* **********  */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 128px;
+  user-select: none;
+}
+.pagination a {
+  color: #000;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: 0.3s all ease;
+}
+.pagination a:hover {
+  background-color: #000;
+  color: #fff;
+}
+.pagination .selected > a {
+  background-color: #000;
+  color: #fff;
+}
+.pagination .disabled > a {
+  background-color: #ddd;
+  color: #fff;
+}
+
+/* ********** */
+/* NEWSLETTER */
+/* ********** */
+.newsletter-form > div > input {
+  width: 100%;
+  background: transparent;
+  color: black;
+  font-size: 16px;
+  padding: 0 15px;
+  border-radius: 5px 0 0 5px;
+  height: 45px;
+}
+
+.newsletter-form > div > input:focus {
+  outline: none;
+  border: none;
+}
+.newsletter-form > div > input::placeholder {
+  color: #000 !important;
+}
+.newsletter-form > div > a {
+  background: #111;
+  border: 1px solid #111;
+  color: #fff;
+  padding: 9px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin-right: 4px;
+}
